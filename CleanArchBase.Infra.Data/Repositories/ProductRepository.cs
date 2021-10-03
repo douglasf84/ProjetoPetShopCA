@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CleanArchBase.Infra.Data.Repositories
 {
-    public class ProductRepository : IProductRepository
+    public class ProductRepository : IProdutoRepository
     {
         private ApplicationDbContext _context;
 
@@ -17,29 +17,29 @@ namespace CleanArchBase.Infra.Data.Repositories
             _context = context;
         }
 
-        public async Task CreateAsync(Product product)
+        public async Task CreateAsync(Produto product)
         {
             await _context.AddAsync(product);
             await _context.SaveChangesAsync();
         }
         
-        public async Task<Product> GetByIdAsync(int? id)
+        public async Task<Produto> GetByIdAsync(int? id)
         {
             return await _context.Products.FindAsync(id);
         }
 
-        public async Task<IEnumerable<Product>> GetProductsAsync()
+        public async Task<IEnumerable<Produto>> GetProductsAsync()
         {
             return await _context.Products.ToListAsync();
         }
 
-        public async Task RemoveAsync(Product product)
+        public async Task RemoveAsync(Produto product)
         {
             _context.Remove(product);
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateAsync(Product product)
+        public async Task UpdateAsync(Produto product)
         {
             _context.Update(product);
             await _context.SaveChangesAsync();

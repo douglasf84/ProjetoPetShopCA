@@ -22,7 +22,7 @@ namespace CleanArchBase.Infra.IoC
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProdutoRepository, ProductRepository>();
             services.AddScoped<IProductService, ProductService>();
 
             return services;

@@ -10,10 +10,10 @@ namespace CleanArchBase.Application.Services
 {
     public class ProductService : IProductService
     {
-        private IProductRepository _productRepository;
+        private IProdutoRepository _productRepository;
         private readonly IMapper _mapper;
 
-        public ProductService(IProductRepository productRepository, IMapper mapper)
+        public ProductService(IProdutoRepository productRepository, IMapper mapper)
         {
             _productRepository = productRepository;
             _mapper = mapper;
@@ -21,7 +21,7 @@ namespace CleanArchBase.Application.Services
 
         public async Task CreateAsync(ProductViewModel product)
         {
-            var mapProduct = _mapper.Map<Product>(product);
+            var mapProduct = _mapper.Map<Produto>(product);
             await _productRepository.CreateAsync(mapProduct);
         }
 
@@ -46,7 +46,7 @@ namespace CleanArchBase.Application.Services
 
         public async Task UpdateAsync(ProductViewModel product)
         {
-            var mapProdutc = _mapper.Map<Product>(product);
+            var mapProdutc = _mapper.Map<Produto>(product);
             await _productRepository.UpdateAsync(mapProdutc);
         }
 

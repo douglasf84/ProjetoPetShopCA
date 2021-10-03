@@ -12,7 +12,7 @@ namespace CleanArchBase.Infra.Data.Context
         {
         }
 
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Produto> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
