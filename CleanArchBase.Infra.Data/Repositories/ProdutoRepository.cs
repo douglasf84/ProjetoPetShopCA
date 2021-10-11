@@ -8,40 +8,40 @@ using System.Threading.Tasks;
 
 namespace CleanArchBase.Infra.Data.Repositories
 {
-    public class ProductRepository : IProdutoRepository
+    public class ProdutoRepository : IProdutoRepository
     {
         private ApplicationDbContext _context;
 
-        public ProductRepository(ApplicationDbContext context)
+        public ProdutoRepository(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        public async Task CreateAsync(Produto product)
+        public async Task CreateAsync(Produto produto)
         {
-            await _context.AddAsync(product);
+            await _context.AddAsync(produto);
             await _context.SaveChangesAsync();
         }
         
         public async Task<Produto> GetByIdAsync(int? id)
         {
-            return await _context.Products.FindAsync(id);
+            return await _context.Produtos.FindAsync(id);
         }
 
-        public async Task<IEnumerable<Produto>> GetProductsAsync()
+        public async Task<IEnumerable<Produto>> GetAllAsync()
         {
-            return await _context.Products.ToListAsync();
+            return await _context.Produtos.ToListAsync();
         }
 
-        public async Task RemoveAsync(Produto product)
+        public async Task RemoveAsync(Produto produto)
         {
-            _context.Remove(product);
+            _context.Remove(produto);
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateAsync(Produto product)
+        public async Task UpdateAsync(Produto produto)
         {
-            _context.Update(product);
+            _context.Update(produto);
             await _context.SaveChangesAsync();
         }
     }

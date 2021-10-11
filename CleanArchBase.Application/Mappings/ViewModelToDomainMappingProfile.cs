@@ -8,7 +8,14 @@ namespace CleanArchBase.Application.Mappings
     {
         public ViewModelToDomainMappingProfile()
         {
-            CreateMap<ProductViewModel, Produto>();
+            CreateMap<CategoriaViewModel, Categoria>();
+            CreateMap<ClientePFViewModel, ClientePF>();
+            CreateMap<ClientePJViewModel, ClientePJ>();
+            CreateMap<EnderecoViewModel, Endereco>();
+            CreateMap<EstoqueViewModel, Estoque>();
+            CreateMap<MarcaViewModel, Marca>();
+            CreateMap<ModeloViewModel, Modelo>();
+            CreateMap<ProdutoViewModel, Produto>();
         }
     }
 }

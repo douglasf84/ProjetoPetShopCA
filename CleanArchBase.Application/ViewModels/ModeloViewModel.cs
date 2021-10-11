@@ -2,7 +2,7 @@
 
 namespace CleanArchBase.Application.ViewModels
 {
-    public class ModeloViewModel : BaseProduto
+    public class ModeloViewModel
     {
         public int IdMarca { get; set; }
         public List<MarcaViewModel> Marcas { get; set; }

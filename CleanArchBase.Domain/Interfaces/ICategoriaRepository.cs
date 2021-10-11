@@ -9,7 +9,7 @@ namespace CleanArchBase.Domain.Interfaces
         Task CreateAsync(Categoria categoria);
         Task UpdateAsync(Categoria categoria);
         Task RemoveAsync(Categoria categoria);
-        Task<IEnumerable<Categoria>> GetAllsAsync();
+        Task<IEnumerable<Categoria>> GetAllAsync();
         Task<Categoria> GetByIdAsync(int? id);
     }
 }

@@ -12,11 +12,13 @@ namespace CleanArchBase.Domain.Entities
         public string Celular { get; private set; }
         public string Observacao { get; private set; }
         public string Foto { get; private set; }
+        public DateTime DataCriacao { get; private set; }
+        public DateTime? DataUltimaAtualizacao { get; private set; }
+        public bool Situacao { get; private set; }
+
+
         public Endereco Endereco { get; private set; }
         public int EnderecoId { get; private set; }
-        public ICollection<Endereco> Enderecos { get; set; }
-        public DateTime DataCriacao { get; private set; }
-        public DateTime DataUltimaAtualizacao { get; private set; }
-        public bool Situacao { get; private set; }
+      
     }
 }

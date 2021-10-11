@@ -9,7 +9,7 @@ namespace CleanArchBase.Domain.Interfaces
         Task CreateAsync(Produto product);
         Task UpdateAsync(Produto product);
         Task RemoveAsync(Produto product);
-        Task<IEnumerable<Produto>> GetProductsAsync();
+        Task<IEnumerable<Produto>> GetAllAsync();
         Task<Produto> GetByIdAsync(int? id);
     }
 }

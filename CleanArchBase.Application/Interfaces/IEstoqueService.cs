@@ -6,10 +6,10 @@ namespace CleanArchBase.Application.Interfaces
 {
     public interface IEstoqueService
     {
-        Task CreateAsync(EstoqueViewModel estoqueViewModel);
-        Task UpdateAsync(EstoqueViewModel estoqueViewModel);
+        Task CreateAsync(EstoqueViewModel estoque);
+        Task UpdateAsync(EstoqueViewModel estoque);
         Task RemoveAsync(int? id);
-        Task<IEnumerable<EstoqueViewModel>> GetProductsAsync();
+        Task<IEnumerable<EstoqueViewModel>> GetAllAsync();
         Task<EstoqueViewModel> GetByIdAsync(int? id);
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using CleanArchBase.Domain.Entities;
+using System.ComponentModel.DataAnnotations;
 
 namespace CleanArchBase.Application.ViewModels
 {
@@ -32,5 +33,12 @@ namespace CleanArchBase.Application.ViewModels
         [MaxLength(50)]
         [Required]
         public string Estado { get; set; }
+
+        public ClientePF ClientePF { get; set; }
+        public int ClientePFId { get; set; }
+
+        public ClientePJ ClientePJ { get; set; }
+        public int ClientePJId { get; set; }
+
     }
 }

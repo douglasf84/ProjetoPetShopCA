@@ -22,8 +22,29 @@ namespace CleanArchBase.Infra.IoC
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            services.AddScoped<IProdutoRepository, ProductRepository>();
-            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+            services.AddScoped<ICategoriaService, CategoriaService>();
+
+            services.AddScoped<IClientePFRepository, ClientePFRepository>();
+            services.AddScoped<IClientePFService, ClientePFService>();
+
+            services.AddScoped<IClientePJRepository, ClientePJRepository>();
+            services.AddScoped<IClientePJService, ClientePJService>();
+
+            services.AddScoped<IEnderecoRepository, EnderecoRepository>();
+            services.AddScoped<IEnderecoService, EnderecoService>();
+
+            services.AddScoped<IEstoqueRepository, EstoqueRepository>();
+            services.AddScoped<IEstoqueService, EstoqueService>();
+
+            services.AddScoped<IMarcaRepository, MarcaRepository>();
+            services.AddScoped<IMarcaService, MarcaService>();
+
+            services.AddScoped<IModeloRepository, ModeloRepository>();
+            services.AddScoped<IModeloService, ModeloService>();
+
+            services.AddScoped<IProdutoRepository, ProdutoRepository>();
+            services.AddScoped<IProdutoService, ProdutoService>();
 
             return services;
         }

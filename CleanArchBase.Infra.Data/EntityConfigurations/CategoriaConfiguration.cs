@@ -4,13 +4,16 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CleanArchBase.Infra.Data.EntityConfigurations
 {
-    public class ProductConfiguration : IEntityTypeConfiguration<Produto>
+    public class CategoriaConfiguration : IEntityTypeConfiguration<Categoria>
     {
-        public void Configure(EntityTypeBuilder<Produto> builder)
+        public void Configure(EntityTypeBuilder<Categoria> builder)
         {
             builder.Property(p => p.Nome).HasMaxLength(100).IsRequired();
             builder.Property(p => p.Descricao).HasMaxLength(100).IsRequired();
-            builder.Property(p => p.Preco).HasPrecision(10, 2).IsRequired();
+            builder.Property(p => p.DataCriacao).IsRequired();
+            builder.Property(p => p.DataAtualizacao).IsRequired();
+
+            // categoria tem o id (chave estrangeira) da marca 
         }
     }
 }

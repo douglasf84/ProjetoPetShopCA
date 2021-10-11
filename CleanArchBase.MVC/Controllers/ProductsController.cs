@@ -8,9 +8,9 @@ namespace CleanArchBase.MVC.Controllers
 {
     public class ProductsController : Controller
     {
-        private readonly IProductService _productService;
+        private readonly IProdutoService _productService;
 
-        public ProductsController(IProductService productService)
+        public ProductsController(IProdutoService productService)
         {
             _productService = productService;
         }
@@ -18,7 +18,7 @@ namespace CleanArchBase.MVC.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var result = await _productService.GetProductsAsync();
+            var result = await _productService.GetAllAsync();
             return View(result);
         }
 
@@ -30,7 +30,7 @@ namespace CleanArchBase.MVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description,Price")] ProductViewModel product)
+        public async Task<IActionResult> Create([Bind("Id,Name,Description,Price")] ProdutoViewModel product)
         {
             if (ModelState.IsValid)
             {
@@ -53,7 +53,7 @@ namespace CleanArchBase.MVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Update([Bind("Id,Name,Description,Price")] ProductViewModel productVM)
+        public async Task<IActionResult> Update([Bind("Id,Name,Description,Price")] ProdutoViewModel productVM)
         {
             if (ModelState.IsValid)
             {

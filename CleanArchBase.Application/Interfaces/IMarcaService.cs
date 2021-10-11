@@ -6,10 +6,10 @@ namespace CleanArchBase.Application.Interfaces
 {
     public interface IMarcaService
     {
-        Task CreateAsync(MarcaViewModel marcaViewModel);
-        Task UpdateAsync(MarcaViewModel marcaViewModel);
+        Task CreateAsync(MarcaViewModel marca);
+        Task UpdateAsync(MarcaViewModel marca);
         Task RemoveAsync(int? id);
-        Task<IEnumerable<MarcaViewModel>> GetProductsAsync();
+        Task<IEnumerable<MarcaViewModel>> GetAllAsync();
         Task<MarcaViewModel> GetByIdAsync(int? id);
     }
 }

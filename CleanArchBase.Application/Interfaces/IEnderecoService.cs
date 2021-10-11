@@ -6,10 +6,10 @@ namespace CleanArchBase.Application.Interfaces
 {
     public interface IEnderecoService
     {
-        Task CreateAsync(EnderecoViewModel enderecoViewModel);
-        Task UpdateAsync(EnderecoViewModel enderecoViewModel);
+        Task CreateAsync(EnderecoViewModel endereco);
+        Task UpdateAsync(EnderecoViewModel endereco);
         Task RemoveAsync(int? id);
-        Task<IEnumerable<EnderecoViewModel>> GetProductsAsync();
+        Task<IEnumerable<EnderecoViewModel>> GetAllAsync();
         Task<EnderecoViewModel> GetByIdAsync(int? id);
     }
 }

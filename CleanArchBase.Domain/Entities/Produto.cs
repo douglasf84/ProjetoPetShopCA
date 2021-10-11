@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace CleanArchBase.Domain.Entities
 {
     public class Produto : BaseProduto
-    {        
-        public decimal Price { get; set; }
+    {
+        public decimal Preco { get; set; }
         public int IdCategoria { get; set; }
         public List<Categoria> Categorias { get; set; }
     }

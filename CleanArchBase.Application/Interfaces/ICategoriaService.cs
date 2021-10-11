@@ -4,12 +4,12 @@ using System.Threading.Tasks;
 
 namespace CleanArchBase.Application.Interfaces
 {
-    public interface ICategoriaPFService
+    public interface ICategoriaService
     {
-        Task CreateAsync(CategoriaViewModel categoriaViewModel);
-        Task UpdateAsync(CategoriaViewModel categoriaViewModel);
+        Task CreateAsync(CategoriaViewModel categoria);
+        Task UpdateAsync(CategoriaViewModel categoria);
         Task RemoveAsync(int? id);
-        Task<IEnumerable<CategoriaViewModel>> GetProductsAsync();
+        Task<IEnumerable<CategoriaViewModel>> GetAllAsync();
         Task<CategoriaViewModel> GetByIdAsync(int? id);
     }
 }

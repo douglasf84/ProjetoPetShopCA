@@ -1,4 +1,4 @@
-﻿@model CleanArchBase.Application.ViewModels.ProductViewModel
+﻿@model CleanArchBase.Application.ViewModels.ProdutoViewModel
 
 @{
     ViewData["Title"] = "Update Product";
@@ -14,19 +14,19 @@
 
     <div class="col-md-6">
         <input type="hidden" asp-for="Id" />
-        <label asp-for="Name" class="form-label">Name</label>
-        <input type="text" class="form-control" asp-for="Name">
-        <span asp-validation-for="Name" class="text-danger"></span>
+        <label asp-for="Nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" asp-for="Nome">
+        <span asp-validation-for="Nome" class="text-danger"></span>
     </div>
     <div class="col-md-6">
-        <label asp-for="Price" class="form-label">Price</label>
-        <input type="text" class="form-control" asp-for="Price">
-        <span asp-validation-for="Price" class="text-danger"></span>
+        <label asp-for="Preco" class="form-label">Preco</label>
+        <input type="text" class="form-control" asp-for="Preco">
+        <span asp-validation-for="Preco" class="text-danger"></span>
     </div>
     <div class="col-12">
-        <label asp-for="Description" class="form-label">Description</label>
-        <input type="text" class="form-control" asp-for="Description">
-        <span asp-validation-for="Description" class="text-danger"></span>
+        <label asp-for="Descricao" class="form-label">Description</label>
+        <input type="text" class="form-control" asp-for="Descricao">
+        <span asp-validation-for="Descricao" class="text-danger"></span>
     </div>
     <hr />
     <div class="col-12">

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CleanArchBase.Domain.Entities;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace CleanArchBase.Application.ViewModels
@@ -37,7 +40,8 @@ namespace CleanArchBase.Application.ViewModels
 
         public string Foto { get; set; }
 
-        public EnderecoViewModel Endereco { get; set; }
+        public Endereco Endereco { get; set; }
+
         public int IdEndereco { get; set; }
         public DateTime DataCriacao { get; set; }
         public DateTime DataUltimaAtualizacao { get; set; }

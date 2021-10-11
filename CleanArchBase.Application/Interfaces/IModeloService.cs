@@ -6,10 +6,10 @@ namespace CleanArchBase.Application.Interfaces
 {
     public interface IModeloService
     {
-        Task CreateAsync(ModeloViewModel modeloViewModel);
-        Task UpdateAsync(ModeloViewModel modeloViewModel);
+        Task CreateAsync(ModeloViewModel modelo);
+        Task UpdateAsync(ModeloViewModel modelo);
         Task RemoveAsync(int? id);
-        Task<IEnumerable<ModeloViewModel>> GetProductsAsync();
+        Task<IEnumerable<ModeloViewModel>> GetAllAsync();
         Task<ModeloViewModel> GetByIdAsync(int? id);
     }
 }

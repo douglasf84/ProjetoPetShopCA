@@ -6,7 +6,7 @@ namespace CleanArchBase.Application.ViewModels
     {
         public int IdProduto { get; set; }
 
-        public List<ProductViewModel> Produtos { get; set; }
+        public List<ProdutoViewModel> Produtos { get; set; }
          
     }
 }
